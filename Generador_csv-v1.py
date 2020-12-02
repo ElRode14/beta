@@ -58,10 +58,6 @@ def Q_TLC_PI(fechafin,usernameTLC,passwordTLC,SIDTLC='TLCPR01',cantidaddias=1,QU
 					f.close()
 					shutil.move(filelectura, finalizado+archivo)
 					break
-				#targetCursor.executemany("insert into MyTable values (:1, :2)", rows)
-				#targetConnection.commit()
-		#Traigo todos los registros
-		#datosclient=cursor.fetchall() #Tupla con todos los diccionarios, cada uno es un registro de clientes
 		except cx_Oracle.Error as error:
 			logging.error(f'Query = {consultaquery}')
 			logging.error(f'Error conexión con base Oracle a las {fechainicio}')
